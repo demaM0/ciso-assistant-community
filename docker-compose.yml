@@ -43,13 +43,13 @@ services:
 
   frontend:
     container_name: frontend
+    build:
+      context: ./frontend
     environment:
       - PUBLIC_BACKEND_API_URL=http://backend:8000/api
       - PUBLIC_BACKEND_API_EXPOSED_URL=https://localhost:8443/api
       - PROTOCOL_HEADER=x-forwarded-proto
       - HOST_HEADER=x-forwarded-host
-    image: ghcr.io/intuitem/ciso-assistant-community/frontend:latest
-    pull_policy: always
     depends_on:
       backend:
         condition: service_healthy
