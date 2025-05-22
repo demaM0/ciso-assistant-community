@@ -1,5 +1,5 @@
 <script lang="ts">
-	import diverse from '$lib/assets/diverse.svg';
+	import diverse from '$lib/assets/diverse.png';
 
 	export let height = 200;
 	export let width = 200;
